@@ -16,6 +16,7 @@ var DBUlbimongoinfo = atdb.DBInfo{
 	DBName:   "tesdb2024",
 }
 
+
 var Ulbimongoconn = atdb.MongoConnect(DBUlbimongoinfo)
 
 var Usertables = [4]whatsauth.LoginInfo{mhs, dosen, user, user1}
