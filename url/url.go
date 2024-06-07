@@ -21,5 +21,6 @@ func Web(page *fiber.App) {
 	page.Get("/presensi", controller.GetPresensi)
 	page.Get("/presensi/:id", controller.GetPresensiID)
 	page.Post("/insert", controller.InsertDataPresensi)
+	page.Put("/update/:id", controller.UpdateData)
 
 }
