@@ -22,7 +22,7 @@ import (
 	// @contact.url https://github.com/rayfanaqbil
 	// @contact.email rayfana09@gmail.com
 
-	// @host ws-rayfan2024-7c90fe3029b2.herokuapp.com/
+	// @host ws-rayfan2024-7c90fe3029b2.herokuapp.com
 	// @BasePath /
 	// @schemes https http
 )
