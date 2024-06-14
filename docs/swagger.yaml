@@ -67,6 +67,32 @@ info:
   title: TES SWAGGER ULBI
   version: "1.0"
 paths:
+  /ins:
+    post:
+      consumes:
+      - application/json
+      description: Input data presensi.
+      parameters:
+      - description: Payload Body [RAW]
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/controller.Presensi'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.Presensi'
+        "400":
+          description: Bad Request
+        "500":
+          description: Internal Server Error
+      summary: Insert data presensi.
+      tags:
+      - Presensi
   /presensi:
     get:
       consumes:
@@ -80,6 +106,33 @@ paths:
           schema:
             $ref: '#/definitions/controller.Presensi'
       summary: Get All Data Presensi.
+      tags:
+      - Presensi
+  /presensi/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Ambil per ID data presensi.
+      parameters:
+      - description: Masukan ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.Presensi'
+        "400":
+          description: Bad Request
+        "404":
+          description: Not Found
+        "500":
+          description: Internal Server Error
+      summary: Get By ID Data Presensi.
       tags:
       - Presensi
 schemes:
